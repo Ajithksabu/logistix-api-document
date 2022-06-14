@@ -1,0 +1,12 @@
+quarkus:
+  s3:
+    aws:
+      credentials:
+        type: static
+        static-provider:
+          access-key-id: test-key
+          secret-access-key: test-secret
+      region: us-east-1
+    endpoint-override: http://localhost:8008
+bucket:
+  name: quarkus.s3.quickstart
