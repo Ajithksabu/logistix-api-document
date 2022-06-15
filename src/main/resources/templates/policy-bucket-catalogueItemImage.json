@@ -1,0 +1,20 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "*"
+                ]
+            },
+            "Resource": [
+                "arn:aws:s3:::catalogue-item-images/*"
+            ],
+            "Sid": "PublicRead"
+        }
+    ],
+    "Version": "2012-10-17"
+}
