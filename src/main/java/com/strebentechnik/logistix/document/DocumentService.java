@@ -3,6 +3,7 @@ package com.strebentechnik.logistix.document;
 import java.io.File;
 import java.io.FileInputStream;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
 import io.minio.BucketExistsArgs;
@@ -13,7 +14,8 @@ import io.minio.SetBucketPolicyArgs;
 import io.quarkus.qute.Engine;
 import io.quarkus.qute.Template;
 
-public class DocumentService implements IsDocumentService {
+@ApplicationScoped
+public class DocumentService {
     @Inject
     Engine templateEngine;
 

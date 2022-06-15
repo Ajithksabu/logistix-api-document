@@ -22,8 +22,7 @@ import java.io.InputStream;
 public class DocumentResource {
 
     @Inject
-    @Named("dummy")
-    IsDocumentService isDocumentService;
+    DocumentService documentService;
 
     @Inject
     DocumentOperator documentOperator;
@@ -42,7 +41,7 @@ public class DocumentResource {
         String mimeType = tika.detect(tempFile);
 
         // Upload the file to storage service
-        isDocumentService.uploadCatalogueImage(skuNumber, mimeType, tempFile);
+        documentService.uploadCatalogueImage(skuNumber, mimeType, tempFile);
 
         return Response.status(Response.Status.CREATED).build();
     }
